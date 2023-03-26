@@ -34,7 +34,4 @@ def calc_this(dObj, dImg, f, m):
     return(round(dObj, 3), round(dImg, 3), round(f, 3), round(m, 3))
 
 my_sistem = calc_this(dObj, dImg, f, m)
-
-######while dObj==0 or dImg==0 or f==0 or m==0:
-
 print("Object distance:", my_sistem[0],"mm", ", Image distance:", my_sistem[1],"mm", ", Lens focal:", my_sistem[2],"mm", ", Magnification:", my_sistem[3],"mm",)
