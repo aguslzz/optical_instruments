@@ -6,6 +6,8 @@ dImg = 0                       #Lens-Image distance. (mm) Also known as q.
 f = 100                        #Lens focal. (mm)
 m = -2.3                        #Resultant object magnification. (Scalar(adimensional)) 
 
+#This functions receives the optical systems variables, knowing that there are 6 possible cases of 2 minimum variables 
+#to determine the whole optical system behavior.
 def calc_this(dObj, dImg, f, m):
     if dObj != 0 and m != 0:
         dImg = -(m*dObj)
@@ -33,5 +35,6 @@ def calc_this(dObj, dImg, f, m):
 
     return(round(dObj, 3), round(dImg, 3), round(f, 3), round(m, 3))
 
+#Call the function in order to print the results in console
 my_sistem = calc_this(dObj, dImg, f, m)
 print("Object distance:", my_sistem[0],"mm", ", Image distance:", my_sistem[1],"mm", ", Lens focal:", my_sistem[2],"mm", ", Magnification:", my_sistem[3],"mm",)
